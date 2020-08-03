@@ -51,7 +51,7 @@ hence the two clients.
 
 The react app runs on `port 3000` and the server app runs on `port 5000`.
 
-The server makes all of the API calls, so use `http://localhost:5000` as your origin and `http://localhost:5000/['genius' or 'youtube' - depending on the client]/oauth2callback` as the redirect URI when setting up your API clients (Google, Genius, etc.)
+The server makes all of the API calls, so use `http://localhost:5000` as your origin and `http://localhost:5000/['genius' or 'youtube']/oauth2callback` as the redirect URI when setting up your API clients (Google, Genius, etc.)
 
 ### Edit your server
 
