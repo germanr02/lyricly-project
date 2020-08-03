@@ -52,7 +52,7 @@ The YouTube client, on the other hand, lets us add multiple endpoints to a singl
 
 The react app runs on `port 3000` and the server app runs on `port 5000`.
 
-The server makes all of the API calls, so we use `http://localhost:5000` as our origin URI when setting up our API clients (Google, Genius, etc.). 
+The server makes all of the API calls, so we use `http://localhost:5000` as the origin URI when setting up our API clients (Google, Genius, etc.). 
 
 Use `http://localhost:5000/['genius' or 'youtube']/oauth2callback` as the redirect URI.
 
