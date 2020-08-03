@@ -1,7 +1,7 @@
-const { youtube, genius_PRD, genius_DEV, mxm } = require("./credentials.json");
+const { youtube, genius_PRD, genius_DEV, mxm, JWTsecret } = require("./credentials.json");
 
 module.exports = {
-  JWTsecret: "mysecret",
+  JWTsecret: JWTsecret,
 
   youtube: {
     api_key: youtube.api_key,
