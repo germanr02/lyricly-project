@@ -44,16 +44,25 @@ Create it in the `/api` folder and use the following format:
 
 `config.js` gets all its info from this file.
 
-### Setting up your API clients
+Genius has two clients, one for production and another for development. This is because each client only allowed me to set one origin URI and one redirect URI,
+hence the two clients.
+
+### Set up your API clients
 
 The react app runs on `port 3000` and the server app runs on `port 5000`.
 
-The server makes all of the API calls, so use `http://localhost:5000` as your origin and redirect URL when setting up your API clients (Google, Genius, etc.)
+The server makes all of the API calls, so use `http://localhost:5000` as your origin and `http://localhost:5000/['genius' or 'youtube' - depending on the client]/oauth2callback` as the redirect URI when setting up your API clients (Google, Genius, etc.)
 
-### Installing the packages
+### Edit your server
+
+`server.js` can use one of two `routes` files. One for dev testing (`routes_DEV.js`) and another for deployment (`routes.js`).
+
+Uncomment the correct file (`DEV`) in `server.js`.
+
+### Install packages
 Start in the root folder: `yarn install` && `cd client && yarn install` or `npm` if you prefer.
 
-### Running the project
+### Run the project
 `yarn run dev` or `npm run dev` - depending on which package manager you use.
 
 Thanks for checking out this project!
