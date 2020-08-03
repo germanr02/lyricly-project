@@ -1,0 +1,101 @@
+.content-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  max-height: 70vh;
+  background-color: rgba(0, 0, 0, 0.858);
+  // background-color: white;
+  padding: 1.5vw 2vw 1vw 2vw;
+  margin-bottom: 3vh;
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .video-and-lyrics {
+    height: 100%;
+    display: flex;
+    
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .media-content-container {
+      width: 70%;
+      height: 100%;
+      
+      &:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+    }
+
+    .data-container {
+      margin: 0 0 0 1.5vw;
+      min-width: 25vw;
+      width: 30%;
+      height: 100%;
+      
+      &:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 963px) {
+  .content-container {
+    max-height: 90vh;
+    height: 90vh;
+
+    .video-and-lyrics {
+      flex-direction: column;
+      align-items: center;
+      height: 98%;
+
+      .media-content-container {
+        height: 50%;
+        width: 100%;
+      }
+
+      .data-container {
+        height: 50%;
+        width: 95%;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .content-container {
+    max-height: 77vh;
+    height: 77vh;
+    padding: 1vw 2vw 1vw 2vw;
+
+    .video-and-lyrics {
+      flex-direction: column;
+      align-items: center;
+      height: 98%;
+
+      .media-content-container {
+        height: 40%;
+        width: 100%;
+      }
+
+      .data-container {
+        height: 60%;
+        width: 95%;
+        overflow: hidden;
+      }
+    }
+  }
+}

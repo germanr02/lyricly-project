@@ -1,0 +1,111 @@
+.lyrics-content-container {
+  font-style: italic;
+  height: inherit;
+  overflow-y: scroll;
+
+  .divider {
+    margin: 15px 30px;
+    margin-bottom: 20px;
+  }
+
+  .lyrics-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .track-title-container {
+      // background-color: coral;
+      line-height: 1.5rem;
+      color: rgba(255, 255, 255, 0.523);
+      margin: auto;
+      padding: 0 10px;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+
+      .track-title {
+        font-size: 14px;
+        font-weight: 400;
+      }
+      .album-title {
+        font-size: 13px;
+        font-weight: 400;
+      }
+    }
+    .top-links {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 10px;
+
+      .media-link {
+        padding: 0 21px 0 0;
+        font-size: 13px;
+        font-weight: 400;
+        transition: font-weight 0.06s ease-in-out;
+        &:hover {
+          font-weight: 700;
+        }
+      }
+
+      .media-unavailable {
+        padding: 0 21px 0 0;
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.23);
+        text-decoration: underline;
+      }
+
+      .back-function {
+        display: flex;
+        align-items: center;
+
+        .material-icons {
+          font-size: 20px;
+        }
+
+        .back-arrow {
+          padding: 0 5px 0 10px;
+          color: rgba(255, 255, 255, 0.523);
+          transform: translateZ(0);
+          transition: all 0.25s ease-in-out;
+          z-index: 1;
+        }
+        .new-results-text {
+          color: rgba(255, 255, 255, 0.75);
+          font-size: 13px;
+          font-weight: 400;
+          transform: translateZ(0);
+          transition: all 0.25s ease-in-out;
+          z-index: 1;
+        }
+        &:hover {
+          cursor: pointer;
+          .back-arrow {
+            color: rgba(255, 255, 255, 0.9);
+          }
+          .new-results-text {
+            color: rgb(255, 255, 255);
+          }
+        }
+      }
+    }
+  }
+  .lyrics-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+    height: inherit;
+
+    .lyrics {
+      text-align: center;
+      font-weight: 500;
+      line-height: 1.8rem;
+      color: rgba(210, 210, 210, 0.75);
+      white-space: pre-wrap;
+      margin: auto;
+      padding: 5px 30px 15px 30px;
+      border-radius: 15px;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.mdl-button {
+  text-align: center;
+}
+
+
+.custom-button {
+  // background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgb(33,150,243);
+  min-width: 50px;
+  min-height: 30px;
+  border-radius: 5px;
+  // border-color: gray;
+  border-color: transparent;
+  border-width: 1px;
+  // color: orange;
+  color: white;
+  outline: none;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

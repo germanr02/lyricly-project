@@ -1,0 +1,142 @@
+.genius-data {
+  height: inherit;
+  overflow-y: scroll;
+  text-align: center;
+
+  .genius-data-text {
+    font-size: 13px;
+    line-height: 2rem;
+    color: rgba(255, 255, 255, 0.523);
+    font-weight: 500;
+    font-style: italic;
+
+    &.unavailable {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.23);
+      text-decoration: underline;
+    }
+  }
+
+  .genius-data-title {
+    margin: 0 10px !important;
+    font-weight: 400;
+    font-size: 1.2em;
+
+    &:first-child {
+      margin-top: 0 !important;
+    }
+  }
+
+  .genius-song-title {
+    font-weight: 400;
+    font-size: 15px;
+    padding-left: 3px;
+    margin-bottom: 10px !important;
+    width: 80%;
+    margin: auto !important;
+  }
+
+  .genius-data-container {
+    padding: 20px 0;
+  }
+
+  .art {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+
+    .image-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 10px 0;
+      width: 100%;
+
+      img {
+        background-color: white;
+        width: 48%;
+        height: auto;
+        transform: translateZ(0);
+        transition: transform 0.25s ease;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  .media-link {
+    font-size: 13px;
+    transition: all 0.06s ease;
+    &:hover {
+      font-weight: 700;
+      letter-spacing: 0.02rem;
+    }
+    &.search-link {
+      font-size: 13px;
+    }
+  }
+
+  .song-relationships {
+    width: 82%;
+    margin: auto;
+    margin-right: 8%;
+
+    .rel-container {
+      background-color: rgba(40, 40, 40, 0.762);
+      border: 1px solid rgba(125, 125, 125, 0.598);
+      border-top: none;
+      border-bottom: none;
+      border-radius: 5px;
+      padding: 10px 7px !important;
+      margin: 15px 0 !important;
+      max-height: 250px;
+      width: 100%;
+      overflow-y: scroll;
+      overflow-x: hidden;
+    }
+
+    .music-data-search-item {
+      margin: auto;
+      width: 98%;
+    }
+  }
+}
+
+@media only screen and (max-width: 963px) {
+  .genius-data {
+    .art {
+      flex-direction: row;
+      justify-content: space-around;
+      .image-content {
+        width: 40%;
+        img {
+          width: 58%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .genius-data {
+    .art {
+      flex-direction: column;
+      justify-content: space-between;
+      .image-content {
+        width: 45%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .song-relationships{
+      .rel-container{
+        max-height: 205px;
+      }
+    }
+  }
+}

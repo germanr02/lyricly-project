@@ -1,0 +1,27 @@
+{
+  "name": "server",
+  "version": "0.0.1",
+  "description": "Server for API backend calls",
+  "main": "server.js",
+  "author": "German Ruiz",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "concurrently": "^5.2.0",
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "google-auth-library": "^6.0.0",
+    "googleapis": "^51.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "nodemon": "^2.0.4",
+    "simple-oauth2": "^3.4.0",
+    "uuid": "^8.1.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "cd client && yarn start",
+    "dev": "concurrently \"yarn run server\" \"yarn run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false cd client && npm install && npm run build"
+  }
+}

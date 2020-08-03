@@ -1,0 +1,18 @@
+.music-data-search-results {
+  padding: 0 10px !important;
+  height: inherit;
+  width: 100%;
+  margin: auto;
+  overflow-y: scroll;
+
+  .music-data-search-results-message {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 963px) {
+  .music-data-search-results {
+    height: 100%;
+  }
+}

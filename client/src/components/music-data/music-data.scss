@@ -1,0 +1,47 @@
+.music-data-wrapper {
+  height: inherit;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border-radius: 5px;
+  overflow: hidden;
+
+  .music-data-container {
+    color: rgba(255, 255, 255, 0.523);
+    line-height: 2rem;
+    background-color: rgba(245, 245, 245, 0.036);
+    border: 1px solid rgba(0, 0, 0, 0.7);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .tab-options {
+      display: flex;
+      justify-content: stretch;
+      width: 100%;
+      min-height: 3vh;
+      max-height: 3vh;
+    }
+
+    .music-data-content {
+      padding: 10px 0 0 0 !important;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+    }
+  }
+}
+
+@media only screen and (max-width: 963px) {
+  .music-data-wrapper {
+    padding: 1vw 0 0 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .music-data-wrapper {
+    padding: 1vw 0 0 0;
+  }
+}

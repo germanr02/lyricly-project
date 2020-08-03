@@ -1,0 +1,54 @@
+.mdl-layout__header {
+  background-color: rgb(55, 55, 55);
+  z-index: 0;
+  min-height: 48px;
+  max-height: 48px;
+
+  .navbar-content {
+    min-height: 48px;
+    max-height: 48px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2vw 0 75px !important;
+
+    .site-identity {
+      height: 90%;
+      display: flex;
+      align-items: center;
+      margin-left: -5px;
+      z-index: 4;
+
+      .mdl-layout-title {
+        font-size: 1.2rem;
+      }
+
+      .logo {
+        height: 60%;
+        width: auto;
+      }
+    }
+
+    .menu {
+      color: white;
+    }
+  }
+}
+
+@media only screen and (max-height: 667px) {
+  .mdl-layout__header {
+    min-height: 46px;
+    max-height: 46px;
+    .navbar-content {
+      min-height: 46px;
+      max-height: 46px;
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .mdl-layout__header {
+    .navbar-content {
+      padding: 0 20px 0 63px !important;
+    }
+  }
+}

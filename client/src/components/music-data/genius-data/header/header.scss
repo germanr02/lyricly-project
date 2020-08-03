@@ -1,0 +1,28 @@
+.history-arrows {
+  width: 94%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 5px;
+  margin-bottom: -28px;
+
+  .material-icons {
+    font-size: 20px;
+  }
+
+  .nav-direction {
+    transform: translateZ(0);
+    transition: all 0.25s ease-in-out;
+    z-index: 1;
+    // color: rgba(33, 149, 243, 0.81);
+
+    &:hover {
+      cursor: pointer;
+      color: rgba(255, 255, 255, 0.9);
+    }
+  }
+  .nav-direction-disabled {
+    color: rgba(255, 255, 255, 0.13);
+  }
+}

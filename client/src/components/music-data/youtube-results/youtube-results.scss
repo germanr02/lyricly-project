@@ -1,0 +1,14 @@
+.youtube-results {
+  display: flex;
+  flex-direction: column;
+  height: inherit;
+  overflow-y: scroll;
+  padding-left: 10px;
+
+  .yt-results-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: inherit;
+  }
+}
