@@ -37,7 +37,8 @@ Create it in the `/api` folder and use the following format:
   },
   "mxm": {
     "api_key": "API_KEY"
-  }
+  },
+  "JWTsecret": "RANDOM_STRING"
 }
 ```
 
