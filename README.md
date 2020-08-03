@@ -68,6 +68,6 @@ Start in the root folder: `yarn install`, then `cd client && yarn install` or us
 ### Run the project
 `yarn run dev` or `npm run dev` - depending on which package manager you use.
 
-#### The project is now running in a DEV environment!
+#### The project is now running in development!
 
 Thanks for checking out this project
