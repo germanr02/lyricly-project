@@ -161,8 +161,13 @@ const SearchField = () => {
         search_field: "",
       },
     });
-    document.getElementById("search-input").focus();
-    setHasFocus(true);
+    if (search_field) {
+      document.getElementById("search-input").focus();
+      setHasFocus(true);
+    } else {
+      document.getElementById("search-input").blur();
+      setHasFocus(false);
+    }
   };
 
   const handleMouseDown = (event) => {
