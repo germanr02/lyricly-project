@@ -20,6 +20,7 @@ module.exports = {
   },
 
   genius_DEV: {
+    access_token: genius_DEV.access_token,
     client_id: genius_DEV.client_id,
     client_secret: genius_DEV.client_secret,
     state: genius_DEV.state,

@@ -227,8 +227,9 @@ router.get("/youtube/search/:query", [youtubeClientInit], (req, res) => {
 /* ------------------------INDEPENDENT GENIUS SEARCH RESULT ROUTE-------------------------- */
 router.get("/genius/search/:query", (req, res) => {
   try {
-    const accessToken = jwt.verify(req.cookies.geniusJwt, config.JWTsecret)
-      .access_token;
+    // const accessToken = jwt.verify(req.cookies.geniusJwt, config.JWTsecret)
+    //   .access_token;
+    const accessToken = config.genius_PRD.access_token;
     axios
       .get(`https://api.genius.com/search?q=${req.params.query}`, {
         headers: {
@@ -249,8 +250,9 @@ router.get("/genius/search/:query", (req, res) => {
 /* ------------------------GET SONG DATA FROM GENIUS-------------------------- */
 router.get("/genius/songs/:id", (req, res) => {
   try {
-    const accessToken = jwt.verify(req.cookies.geniusJwt, config.JWTsecret)
-      .access_token;
+    // const accessToken = jwt.verify(req.cookies.geniusJwt, config.JWTsecret)
+    //   .access_token;
+    const accessToken = config.genius_PRD.access_token;
     axios
       .get(`https://api.genius.com/songs/${req.params.id}`, {
         headers: {
@@ -350,10 +352,6 @@ router.get("/youtube/playlist/items/:id", [youtubeClientInit], (req, res) => {
 });
 
 /* ------------------------GET MUSIXMATCH TRACK-------------------------- */
-const mxmSearchResults = (req, res, next) => {
-  console.log(req.params.artist, req.params.track);
-};
-
 router.get("/mxm/searchLyrics/:artist/:track", (req, res) => {
   const artist = encodeURIComponent(req.params.artist);
   const track = encodeURIComponent(req.params.track);

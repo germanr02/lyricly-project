@@ -1,22 +1,15 @@
 import React, { useContext } from "react";
-import axios from "axios";
 
 import SideDrawerNavLink from "../side-drawer-nav-link/side-drawer-nav-link.component";
 
 import Context from "../../contexts/context";
 
 import youtube_icon from "../../assets/youtube_icon.png";
-import genius_icon from "../../assets/genius_icon.png"
+// import genius_icon from "../../assets/genius_icon.png"
 import "./side-drawer.styles.scss";
 
 const SideDrawer = () => {
   const { authUrls } = useContext(Context).state;
-
-  const click = () => {
-    axios.get("/genius/search")
-      .then((res) => console.log(res.data))
-      .catch((err) => console.log(err));
-  };
 
   return (
     <div className="mdl-layout__drawer">
@@ -28,11 +21,13 @@ const SideDrawer = () => {
           accountType="YouTube"
           url={authUrls.youtube}
         />
-        <SideDrawerNavLink
+        {/* 
+          <SideDrawerNavLink
           accountIcon={genius_icon}
           accountType="Genius"
           url={authUrls.genius}
-        />
+          />
+        */}
       </nav>
     </div>
   );

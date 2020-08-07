@@ -31,7 +31,7 @@ const App = () => {
         payload: {
           ...state,
           youtube_username: accountRes.data.youtube,
-          genius_username: accountRes.data.genius,
+          // genius_username: accountRes.data.genius,
           authUrls: {
             youtube: authRes.data.youtube,
             genius:authRes.data.genius

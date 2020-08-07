@@ -34,7 +34,7 @@ const Context = React.createContext({
   youtube_user_authorized: false,
   genius_user_authorized: false,
   youtube_username: null,
-  genius_username: null,
+  genius_username: true,
   youtube_user_playlists: null,
 
   // auth urls
