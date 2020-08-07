@@ -161,13 +161,8 @@ const SearchField = () => {
         search_field: "",
       },
     });
-    if (search_field) {
-      document.getElementById("search-input").focus();
-      setHasFocus(true);
-    } else {
-      document.getElementById("search-input").blur();
-      setHasFocus(false);
-    }
+    document.getElementById("search-input").focus();
+    setHasFocus(true);
   };
 
   const handleMouseDown = (event) => {
@@ -187,7 +182,7 @@ const SearchField = () => {
           handleChange={handleChange}
           value={search_field}
         />
-        {!hasFocus ? null : (
+        {!hasFocus || !search_field ? null : (
           <span
             id="clear-search-field"
             className="material-icons clear-field-icon"
