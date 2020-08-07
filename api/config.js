@@ -13,6 +13,7 @@ module.exports = {
   },
 
   genius_PRD: {
+    access_token: genius_PRD.access_token,
     client_id: genius_PRD.client_id,
     client_secret: genius_PRD.client_secret,
     state: genius_PRD.state,
