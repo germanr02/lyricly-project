@@ -6,8 +6,8 @@ const app = express();
 
 app.use(cookieParser());
 
-// app.use("/", require("./api/routes"));
-app.use("/", require("./api/routes_DEV"));
+app.use("/", require("./api/routes"));
+// app.use("/", require("./api/routes_DEV"));
 
 // Server build if in production
 if (process.env.NODE_ENV === "production") {

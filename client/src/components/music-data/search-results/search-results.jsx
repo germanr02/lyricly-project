@@ -18,7 +18,7 @@ const SearchResults = ({ type }) => {
   const mxmList = mxm_search_results.track_list
     ? mxm_search_results.track_list
     : [];
-
+  console.log(genius_search_results)
   const geniusSearchResults = () => {
     return (
       <div>
