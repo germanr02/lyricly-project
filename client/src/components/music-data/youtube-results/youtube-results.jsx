@@ -15,11 +15,13 @@ const YoutubeResults = () => {
       <div className="message">
         {/* <span>{youtube_search_results.error}</span> */}
         <span>
-          The daily YouTube quota has been reached. <br />
-          You may continue using the results and related videos for more.
+          <br/>
+          The daily YouTube quota has been reached. You may continue using the
+          results and related videos for more.
           <br />
           <br />
           YouTube search results will reset by tomorrow.
+          <br />
           <br />
           {/* 
               To support me (the developer) and help me set a higher quota limit, you can donate <a href="/#">here</a>. <br/>
@@ -72,7 +74,10 @@ const YoutubeResults = () => {
     ) {
       return (
         <div>
-          <div className="music-data-search-results-message" style={{textAlign: "center"}}>
+          <div
+            className="music-data-search-results-message"
+            style={{ textAlign: "center" }}
+          >
             Your video results for "{state.youtube_query}"
           </div>
           {(() => {

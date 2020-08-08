@@ -1,5 +1,27 @@
 .App {
   margin: auto;
+
+  .about {
+    width: 50%;
+    margin: auto;
+    color: rgba(255, 255, 255, 0.865);
+    text-align: center;
+
+    .about-title {
+      
+    }
+
+    .about-divider {
+      margin: auto;
+      margin-bottom: 15px;
+    }
+    .about-message {
+      font-size: 16px;
+      margin: auto;
+      line-height: 2.2rem;
+      margin-bottom: 100px;
+    }
+  }
 }
 
 /* width */

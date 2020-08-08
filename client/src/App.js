@@ -19,29 +19,26 @@ const App = () => {
 
   useEffect(() => {
     console.log("APP useEffect");
-    axios.all([
-      axios.get("/getAccounts"),
-      // axios.get("/authUrls"),
-      axios.get("/authUrls")
-    ])
-    .then(axios.spread((accountRes, authRes) => {
-      // do something with both responses
-      dispatch({
-        type: "UPDATE_CONTEXT",
-        payload: {
-          ...state,
-          youtube_username: accountRes.data.youtube,
-          // genius_username: accountRes.data.genius,
-          authUrls: {
-            youtube: authRes.data.youtube,
-            genius:authRes.data.genius
-          }
-
-        },
-      });
-
-    }))
-    .catch((error) => console.log(error));
+    axios
+      .all([axios.get("/getAccounts"), axios.get("/authUrls")])
+      .then(
+        axios.spread((accountRes, authRes) => {
+          // do something with both responses
+          dispatch({
+            type: "UPDATE_CONTEXT",
+            payload: {
+              ...state,
+              youtube_username: accountRes.data.youtube,
+              // genius_username: accountRes.data.genius,
+              authUrls: {
+                youtube: authRes.data.youtube,
+                genius: authRes.data.genius,
+              },
+            },
+          });
+        })
+      )
+      .catch((error) => console.log(error));
   }, []);
 
   return (
@@ -51,6 +48,25 @@ const App = () => {
         <SideDrawer />
         <main className="mdl-layout__content">
           <ContentDisplay />
+          <div className="about">
+            <h3 className="about-title">About</h3>
+            <hr className="about-divider" />
+            <div className="about-message">
+              I originally started Lyricly.net as a cool learning project to
+              watch music videos and read lyrics. Throughout the process, I
+              quickly realized that there's so much more being left on the table
+              when it comes to enjoying music. There's music art, remixes,
+              samples, non-commercial music and connections to other artists and
+              producers that we rarely see or hear about. My goal is to make
+              this information easily digestible and accessible in a fun,
+              interactive and intuitive way - to create a new digital
+              crate-digging experience
+              <br /> <br />
+              There are many more features on the way in Lyricly 2.0!
+              <br />
+              For now, hope you enjoy the concept of Lyricly!
+            </div>
+          </div>
         </main>
       </div>
     </Context.Provider>

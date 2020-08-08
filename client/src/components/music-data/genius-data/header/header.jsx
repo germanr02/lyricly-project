@@ -60,7 +60,6 @@ const Header = ({
   };
 
   const handleViewLyrics = async () => {
-
     await dispatch({
       type: "UPDATE_CONTEXT",
       payload: {
@@ -69,8 +68,9 @@ const Header = ({
       },
     });
 
-    const title = state.genius_data_history[genius_index].title;
-    const artist = state.genius_data_history[genius_index].artist;
+    const current_genius_data = state.genius_data_history[genius_index];
+    const title = current_genius_data.title;
+    const artist = current_genius_data.artist;
     const encodedArtist = encodeURIComponent(artist);
     const encodedTrack = encodeURIComponent(title);
     axios
@@ -94,26 +94,25 @@ const Header = ({
             const trackMatch =
               r.track.track_name.toLowerCase() === title.toLowerCase();
             return artistMatch && trackMatch;
-          
           }).track.commontrack_id;
         } catch (error) {
           mxm_error_message = res.data.code;
         }
 
         dispatch({
-            type: "UPDATE_CONTEXT",
-            payload: {
-              ...state,
-              mxm_search_results: mxm_search_results,
-              mxm_new_results: mxm_new_results,
-              mxmResultsLoading: false,
-              mxm_error_message: mxm_error_message,
-              is_reading_lyrics: false,
-              music_data_active_tab: "lyrics-tab",
-              mxm_smart_pick
-            },
-          });
-
+          type: "UPDATE_CONTEXT",
+          payload: {
+            ...state,
+            mxm_search_results: mxm_search_results,
+            mxm_new_results: mxm_new_results,
+            mxmResultsLoading: false,
+            mxm_error_message: mxm_error_message,
+            is_reading_lyrics: false,
+            music_data_active_tab: "lyrics-tab",
+            mxm_smart_pick,
+            current_genius_data
+          },
+        });
       });
   };
 
