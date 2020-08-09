@@ -54,15 +54,15 @@ const App = () => {
             <div className="about-message">
               I originally started Lyricly.net as a cool learning project to
               watch music videos and read lyrics. Along the way, I quickly
-              discovered that there's so much more being left on the table when
-              it comes to enjoying music. There's music art, remixes, samples,
-              merch, non-commercial music and connections to other artists and
+              realized that there's so much more being left on the table when it
+              comes to enjoying music. There's music art, remixes, samples,
+              non-commercial music and connections to other artists and
               producers that we rarely get to see or hear about. My goal is to
-              create a platform where this information easily digestible and
-              accessible in a fun, interactive and intuitive way - to create a
-              new digital crate-digging experience!
+              create a platform to make this information easily digestible and
+              accessible in a fun, interactive and intuitive way - to create
+              a <i>new digital crate-digging experience</i>.
               <br /> <br />
-              There are many more features on the way in Lyricly 2.0!
+              Many more features on the way in Lyricly 2.0!
               <br />
               For now, hope you enjoy the concept of Lyricly!
             </div>
