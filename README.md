@@ -10,7 +10,7 @@ I will continue to maintiain and upgrade the project over time.
 ## Getting Started
 ### Add the necessary info
 
-To make the project work you need one thing... a `"credentials.json"` file.
+To make the project work you need a `"credentials.json"` file.
 
 Create it in the `/api` folder and use the following format:
 
@@ -44,30 +44,26 @@ Create it in the `/api` folder and use the following format:
 
 `config.js` gets all its info from this file.
 
-There are two Genius clients set up here, one for production and another for development. This is because each Genius client allows only one origin URI and one redirect URI, hence the two clients. 
+There are two Genius clients set up here, one for production and another for development. This is because each Genius client allows only one origin URI and one redirect URI, hence the two clients - one for making requests from localhost and for prodcution testing.
 
-The YouTube client, on the other hand, lets us add multiple endpoints to a single client, thus we only need one.
+The YouTube client, on the other hand, lets you add multiple endpoints to a single client, thus we only need one for dev and prd.
 
 ### Set up your API clients
 
 The react app runs on `port 3000` and the server app runs on `port 5000`.
 
-The server makes all of the API calls, so we use `http://localhost:5000` as the origin URI when setting up our API clients (Google, Genius, etc.). 
+The server makes all of the API calls, so use `http://localhost:5000` as the origin URI when setting up your API clients (Google, Genius, etc.). 
 
-Use `http://localhost:5000/['genius' or 'youtube']/oauth2callback` as the redirect URI.
+Use `http://localhost:5000/<'genius' or 'youtube'>/oauth2callback` as the redirect URIs.
 
 ### Edit your server
 
-`server.js` uses one of the two `routes` files. One for dev testing `routes_DEV.js` and another for deployment `routes.js`.
-
-Uncomment Express's use of `routes_DEV.js` in `server.js` and comment `routes.js`.
+`server.js` uses one of the two `routes` files. One for dev testing `routes_DEV.js` and another for prod `routes.js`.
 
 ### Install packages
-Start in the root folder: `yarn install`, then `cd client && yarn install` or use `npm` if you prefer.
+Start in the root folder and run `yarn install`, then `cd client && yarn install` or use `npm` if you prefer.
 
 ### Run the project
-`yarn run dev` or `npm run dev` - depending on which package manager you use.
+`yarn run dev` or `npm run dev` from the root folder - depending on which package manager you use.
 
-#### The project is now running in development!
-
-Thanks for checking out this project
+#### The project should now be running in development!
