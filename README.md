@@ -1,4 +1,4 @@
-# lyricly-proto
+# Lyricly
 A simple interface to explore and learn more about the music you love: https://lyricly.net
 
 This app uses various APIs (Genius, YouTube, MusixMatch, Spotify) to search and explore content about music.
