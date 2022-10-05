@@ -1,11 +1,13 @@
 # lyricly-proto
 A simple interface to explore and learn more about the music you love: https://lyricly.net
 
-This app uses various APIs (Genius, YouTube, MusixMatch) to search and gather content about music.
+This app uses various APIs (Genius, YouTube, MusixMatch, Spotify) to search and explore content about music.
 
-While not complete and could use infinite changes and improvements, it serves as a prototype for a fun (and potentially useful) web application.
+---
+## How to use the app:
+This is a simple search engine for music videos and lyrics. Simply search a music title in the search bar and results will come up on the search results component, results provided by the Genius API. Click on a Song Title from the results to automatically search for lyrics, provided by the Musixmatch API. Click on the "Watch Related Video" link to automatically start the Music Video, provided by the YouTube API. Click on the "More" tab to view more Details on the selected song, content provided by the Genius API. Scroll down to view other content related to the song. Click on related music to view content on the related song. Use the front and back arrows at the top of the "More" tab navigate through your exploration history.
 
-I will continue to maintiain and upgrade the project over time.
+---
 
 ## Getting Started
 ### Add the necessary info
