@@ -12,7 +12,7 @@
     "express": "^4.17.1",
     "google-auth-library": "^6.0.0",
     "googleapis": "^51.0.0",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "nodemon": "^2.0.4",
     "simple-oauth2": "^3.4.0",
     "uuid": "^8.1.0"
